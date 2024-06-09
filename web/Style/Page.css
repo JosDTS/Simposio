@@ -1,0 +1,22 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 jun. 2024, 00:29:29
+    Author     : ESTUDIANTE
+*/
+
+body{
+    font-family: Arial, sans-serif; 
+    background-color:  #FFFFFF; 
+}
+
+header{
+    height: 350px; 
+    background-color:  #f99d1c; 
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+    
+}
