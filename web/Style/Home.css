@@ -28,8 +28,9 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color:  #3498db;;
-    
+    background-color:  #3498db;
+    ;
+
 }
 
 .custom-header{
@@ -92,10 +93,14 @@ nav a:hover::after {
 
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #003366;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px 0;
 }
 .background-section{
     background-image: url("../Images/Edificio principal.png");
@@ -103,30 +108,31 @@ footer {
     background-position: center top;
     height: 260px;
     padding: 20px;
-   animation: change-image 30s infinite;
+    animation: change-image 30s infinite;
 }
-   @keyframes change-image{
-       0%{
-           background-image: url("../Images/Edificio principal.png")
-       }
-       20%{
-           background-image: url("../Images/La bomba.png")
-       }
-       40%{
-           background-image: url("../Images/Letrero.png")
-       }
-       60%{
-           background-image: url("../Images/images.png")
-       }
-       80%{
-           background-image: url("../Images/Sede.png")
-       }
-       100%{
-           background-image: url("../Images/Letrero2.png")
-       }al.png
-       
-   }
-   /* Contenedor del título */
+@keyframes change-image{
+    0%{
+        background-image: url("../Images/Edificio principal.png")
+    }
+    20%{
+        background-image: url("../Images/La bomba.png")
+    }
+    40%{
+        background-image: url("../Images/Letrero.png")
+    }
+    60%{
+        background-image: url("../Images/images.png")
+    }
+    80%{
+        background-image: url("../Images/Sede.png")
+    }
+    100%{
+        background-image: url("../Images/Letrero2.png")
+    }
+    al.png
+
+}
+/* Contenedor del título */
 .titulo-container {
     text-align: center;
     background: rgba(200, 205, 216, 0.426);
@@ -150,14 +156,14 @@ footer {
 
 .titulo-grande {
     font-family: 'Playfair Display', serif;
-    font-size: 3em; 
+    font-size: 3em;
     margin-right: 10px;
 }
 
 
 .titulo-elegante {
     font-family: 'Playfair Display', serif;
-    font-size: 1.9em; 
+    font-size: 1.9em;
 }
 .login-container input[type="password"] {
     display: flex;
@@ -193,7 +199,7 @@ footer {
 
 
 body.registro{
-     font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -247,4 +253,104 @@ button {
 button:hover {
     background-color: #032e6e;
     color: #dbe9f5;
+}
+.container3{
+
+    margin: auto;
+    overflow: hidden;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+    border-radius: 8px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-field label {
+    font-size: 16px;
+    color: #333;
+
+}
+
+.forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.forget label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forget a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.register {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
 }
