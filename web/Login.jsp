@@ -1,60 +1,33 @@
 <%-- 
     Document   : Login
-    Created on : 7 jun. 2024, 11:25:38
+    Created on : 11 jun. 2024, 16:16:56
     Author     : ESTUDIANTE
 --%>
 
+<%@page import="ModuleUser.LoginUsers"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inicio de sesion</title>
-        <link rel="stylesheet" href="Style/Home.css">
+        <title>JSP Page</title>
     </head>
     <body>
-        <header class="custom-header">
-            <div>
-                <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
-                <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
-                <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
-            </div>
-            <nav>
-                <a href = "index.html">Inicio</a>
-                <a href = "Registration.jsp">Registrarse</a>
-                <a href = "#">Contacto</a>
+        
+        <%
+           String email = request.getParameter("email");
+           String password = request.getParameter("password"); 
+           
+           LoginUsers lg = new LoginUsers(); 
+           if (lg.login(password, email)){
+            session.setAttribute("usuarioLogueado", email);
+                   String url = "index.html";
+                     response.sendRedirect(url);
+               } else {
+                    String url = "RegistrationGraphic.jsp";
+                     response.sendRedirect(url);
+               }
 
-            </nav>
-        </header>
-
-        <div class="container3">           
-            <h2 class="login-header">Inicio de Sesión</h2>
-            <div class="input-field">
-                <label for="email">Introduce tu email</label>
-                <input type="text" required>
-
-            </div>
-            <div class="input-field">
-                <label for="password">Introduce tu contraseña</label>
-                <input type="password" required>
-
-            </div>
-            <div class="forget">               
-                <label for="remember">
-                    <input type="checkbox" id="remember">
-                    <span>Recordarme</span>
-                </label>
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-            <button type="submit">Entrar</button>
-            <div class="register">
-                <p>¿No tienes una cuenta? <a href="Registration.jsp">Registrarse</a></p>
-            </div>
-
-        </div>
-        <footer class="bg-primary text-white text-center py-3">
-            <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
-        </footer>
+            %>
     </body>
 </html>

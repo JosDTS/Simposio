@@ -9,7 +9,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Style/Home.css">
-        <link rel="stylesheet" href="Style/Page.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -17,18 +16,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <body>
 
         <header class="custom-header">
-            <div>
+            <div class = "logos">
                 <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
                 <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
                 <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
             </div>
-            <nav>
-                <a href = "Login.jsp">Login</a>
-                <a href = "Registration.jsp">Registro</a>
+           
+        </header>
+         <nav>
+                <a href = "LoginGraphic.jsp">Login</a>
+                <a href = "RegistrationGraphic.jsp">Registro</a>
                 <a href = "#">Contacto</a>
                 <a href = "#">ADN</a>
             </nav>
-        </header>
         <div class="titulo-container">
             <h1 class="titulo"><span class="titulo-grande">XII</span><span class="titulo-elegante"> Simposio Informática Empresarial</span></h1>
         </div>
@@ -40,8 +40,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </main>
 
 
-        <h1>Hola a todos los presentes en dicha actividad</h1>
-
+        <h1 class="Description-simposio">¿Que es el Simposio?</h1>
+        <p class="Description-simposio">"Desde el año 2012 se realiza una actividad denominada 
+            Simposio de Informática Empresarial, donde los alumnos, 
+            docentes, graduados, empresarios y público en general; 
+            Se reúnen para expresar el que hacer de la carrera por 
+            medio de ponencias, talleres, charlas y proyectos en 
+            torno a la temática que esta carrera compete." </p>
+        
 
         <footer class="bg-primary text-white text-center py-3">
             <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
