@@ -106,7 +106,6 @@ nav a:hover::after {
 footer {
     position: relative;
     bottom: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: #003366;
@@ -124,6 +123,7 @@ footer {
 
     background-size: cover;
 }
+
 @keyframes change-image{
     0%{
         background-image: url("../Images/Barco.png")
@@ -242,8 +242,7 @@ label {
     color: #333333;
 }
 
-input,
-select {
+input,select {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 4px;
@@ -265,6 +264,7 @@ button:hover {
     background-color: #032e6e;
     color: #dbe9f5;
 }
+
 .container3{
 
     margin: auto;
@@ -364,4 +364,33 @@ button:hover {
 
 .register a:hover {
     text-decoration: underline;
+}
+
+.pharagraf{
+    font-size:1.4rem;
+    position: sticky;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.pharagraf p {
+    transform: translate(15px, 0);
+    transition: transform 1s ease-in-out;
+}
+.imagen{
+  margin-left: 10%;
+  width: 150%;
+  height: 150%;
+  border-radius: 8%;
+  transform: translate(-15px, 0);
+  transition: transform 1s ease-in-out;
+}
+.description{
+font-family: Arial, sans-serif; 
+width: 80%;
+height: 50vh;
+margin: 0 auto;
+position: relative;
 }
