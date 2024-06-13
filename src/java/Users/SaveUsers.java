@@ -15,22 +15,32 @@ import java.nio.file.Path;
  * @author ESTUDIANTE
  */
 public class SaveUsers {
+
+    AesEncryption cr = new AesEncryption();
+
     public boolean save(String userType, String name,
-            String email, String password,String identification, String institution, String interestArea,String participantType) {
-
+            String email, String password, String identification, 
+            String institution, String interestArea, String participantType)
+            throws Exception {
+        String[] myArray = {userType, name, email, password, identification,
+            institution, interestArea, participantType};
+        String[] myArrayEncrypted = new String[myArray.length];
+        for (int i = 0; i < myArray.length; i++) {
+            myArrayEncrypted[i] = cr.encrypt(myArray[i]);
+        }
         try {
-            final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation").toPath(); 
+            final Path rutaArchivo = new File("C:\\Users\\Jeison\\Desktop\\"
+                    + "Proyecto Web\\Simposio\\UsersInformation.txt").toPath();
             BufferedWriter writer = new BufferedWriter(
-                    new FileWriter(rutaArchivo.toString(),true));
-
-            writer.write(userType +","+ name+","+ email+"," +password+","+identification+","+institution+","+interestArea+","+participantType);
+                    new FileWriter(rutaArchivo.toString(), true));
+            for (int i = 0; i < myArrayEncrypted.length; i++) {
+                writer.write(myArrayEncrypted[i] + ",");
+            }
             writer.newLine();
             writer.close();
-
-            System.out.println("Usuario guardado correctamente en el archivo.");
-            System.out.println(userType +","+ name+","+ email+"," +password+","+identification+","+institution+","+interestArea+","+participantType);
             return true;
         } catch (IOException e) {
+            System.out.println("Error al guardar");
             return false;
 
         }

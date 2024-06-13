@@ -16,20 +16,20 @@
     <body class="Registro">
 
         <header class="custom-header">
-            <div>
+            <div class="logos">
                 <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
                 <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
                 <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
             </div>
-            <nav>
-                <a href = "index.html">Inicio</a>
-                <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
-                <a href = "#">Contacto</a>
 
-            </nav>
         </header>
+        <nav>
+            <a href = "index.html">Inicio</a>
+            <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
+            <a href = "#">Contacto</a>
+        </nav>
         <div class="container2">
-            
+
             <h2>Formulario de Registro</h2>
             <form action="Registration.jsp" method="post" id="registrationForm">
                 <label for="userType">Registrarse como:</label>

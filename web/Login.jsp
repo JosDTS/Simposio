@@ -13,21 +13,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-        <%
-           String email = request.getParameter("email");
-           String password = request.getParameter("password"); 
-           
-           LoginUsers lg = new LoginUsers(); 
-           if (lg.login(password, email)){
-            session.setAttribute("usuarioLogueado", email);
-                   String url = "index.html";
-                     response.sendRedirect(url);
-               } else {
-                    String url = "RegistrationGraphic.jsp";
-                     response.sendRedirect(url);
-               }
 
-            %>
+        <%
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+
+            LoginUsers lg = new LoginUsers();
+            if (lg.login(password, email)) {
+                session.setAttribute("usuarioLogueado", email);
+                String url = "index.html";
+                response.sendRedirect(url);
+            } else {
+                String url = "RegistrationGraphic.jsp";
+                response.sendRedirect(url);
+            }
+
+        %>
     </body>
 </html>

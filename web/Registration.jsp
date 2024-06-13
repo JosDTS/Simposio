@@ -12,10 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-        
-        
-        
+    <body>     
          <%
             String userType = request.getParameter("userType");
             String name = request.getParameter("name");
@@ -28,12 +25,15 @@
              
            
             SaveUsers gu = new SaveUsers();
-            boolean bandera = gu.save(userType, name, email, password,identification,institution,interestArea,participantType);
+            boolean bandera = gu.save(userType, name, email, password,
+                    identification,institution,interestArea, participantType);
             if (bandera) {
-                    out.print("Insertado Correctamente!");
+                  String url = "index.html";
+                  response.sendRedirect(url);
                     
                 }else{
-                out.print("No insertado");
+                String url = "RegistrationGraphic.jsp";
+                  response.sendRedirect(url);
             }
         %>
     </body>
