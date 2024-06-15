@@ -6,6 +6,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 9 jun. 2024, 00:28:04
     Author     : ESTUDIANTE
 */
+/* 
+    Home
+*/
 .logos{
     display: flex;
     justify-content: space-between;
@@ -33,7 +36,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color:  #ffffff;
+    background-color: #80a9ba;
 }
 .custom-header{
     background-color: #005da4;
@@ -90,6 +93,43 @@ nav a:hover::after {
     background: #ffd700;
 }
 
+.MenuIteam{
+    position:relative; 
+}
+
+.subMenu{
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left:0; 
+    background-color: #45a049; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+.subMenu li{
+    border-top: 1px solid white;
+}
+.subMenu li a {
+    font-size: 20px; 
+    color: white; 
+    padding: 10px; 
+    display: block; 
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; 
+    border-right: none;
+    
+}
+.subMenu li a:hover{
+    color: #ffd700;
+    background-color: #444; 
+    transform: none;
+}
+.MenuIteam.show.subMenu{
+    display: block; 
+}
+
 .Description-simposio{
     font-family: Arial, sans-serif; 
     font-size: 30px; 
@@ -120,7 +160,6 @@ footer {
     padding: 20px;
     animation: change-image 30s infinite;
     width: 100%;
-
     background-size: cover;
 }
 
@@ -176,6 +215,96 @@ footer {
     font-family: 'Playfair Display', serif;
     font-size: 1.9em;
 }
+
+@keyframes mover-izquierda-derecha{
+from{
+    transform:translateX(-90px);
+}
+to{
+    transform: translateX(35px);
+}
+
+}
+@keyframes mover-izquierda-derecha-activities{
+from{
+    transform:translateX(-300px);
+}
+to{
+    transform: translateX(900px);
+}
+
+}
+
+@keyframes mover-derecha-izquierda{
+    from{
+        transform: translateX(50px); 
+        
+    }
+    to{
+        transform: translateX(-25px);
+    }
+}
+
+@keyframes mover{
+from{
+    transform:translateX(10px);
+}
+to{
+    transform: translateX(40px);
+}
+
+}
+.pharagraf{
+    font-size:1.4rem;
+    position: sticky;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.pharagraf p {
+     animation: mover 2s 1;
+    animation-fill-mode: forwards;
+}
+
+.imagen{
+  margin-left: 10%;
+  width: 150%;
+  height: 150%;
+  border-radius: 8%;
+  transform: translate(-15px, 0);
+  transition: transform 1s ease-in-out;
+  animation: mover-derecha-izquierda 2s 1;
+    animation-fill-mode: forwards;
+}
+.description{
+font-family: Arial, sans-serif; 
+width: 80%;
+height: 50vh;
+margin: 0 auto;
+position: relative;
+}
+
+.description h1{
+    animation: mover-izquierda-derecha 2s 1;
+    animation-fill-mode: forwards;
+}
+.activities{
+    width: 100%; 
+    height: 50%; 
+    background-color: #000000; 
+}
+
+.activities h1{
+     animation: mover-izquierda-derecha-activities 2s 1;
+    animation-fill-mode: forwards;
+    color: #f0f0f0; 
+}
+
+/* 
+        Login
+*/
 .login-container input[type="password"] {
     display: flex;
     align-items: center;
@@ -265,6 +394,9 @@ button:hover {
     color: #dbe9f5;
 }
 
+/* 
+    REGISTRO
+*/
 .container3{
 
     margin: auto;
@@ -366,31 +498,3 @@ button:hover {
     text-decoration: underline;
 }
 
-.pharagraf{
-    font-size:1.4rem;
-    position: sticky;
-    top: 10%;
-    display: flex;
-    align-items: center;
-    margin-right: 10%;
-}
-
-.pharagraf p {
-    transform: translate(15px, 0);
-    transition: transform 1s ease-in-out;
-}
-.imagen{
-  margin-left: 10%;
-  width: 150%;
-  height: 150%;
-  border-radius: 8%;
-  transform: translate(-15px, 0);
-  transition: transform 1s ease-in-out;
-}
-.description{
-font-family: Arial, sans-serif; 
-width: 80%;
-height: 50vh;
-margin: 0 auto;
-position: relative;
-}

@@ -5,63 +5,84 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Style/Home.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-        <header class="custom-header">
-            <div class = "logos">
-                <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
-                <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
-                <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
-            </div>
+<header class="custom-header">
+    <div class = "logos">
+        <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
+        <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
+        <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
+    </div>
 
-        </header>
-        <nav>
-            <a href = "LoginGraphic.jsp">Login</a>
-            <a href = "RegistrationGraphic.jsp">Registro</a>
-            <a href = "#">Contacto</a>
-            <a href = "#">ADN</a>
-        </nav>
-        <div class="titulo-container">
-            <h1 class="titulo"><span class="titulo-grande">XII</span><span class="titulo-elegante"> Simposio Informática Empresarial</span></h1>
-        </div>
-        <main>
-            <div class="background-section">
+</header>
+<body>
+    <nav>
+    <a href = "LoginGraphic.jsp">Login</a>
+    <a href = "RegistrationGraphic.jsp">Registro</a>
+    <a href = "#">Actividades</a>
+    <div class="MenuIteam">
+        <a href = "#" id="mapa">Mapa</a>
+        <ul class="subMenu" id="submenu">
+            <li><a href ="#">Golfito</a></li>
+            <li><a href ="#">SedeSur</a></li>
+        </ul>
+    </div>
+    <a href = "#">Historia</a>
+    <a href = "#">Actividades</a>
+    <a href = "#">Contacto</a>
+    
+    
+</nav>
+<div class="titulo-container">
+    <h1 class="titulo"><span class="titulo-grande">XII</span><span class="titulo-elegante"> Simposio Informática Empresarial</span></h1>
+</div>
+<section >
+    <div class="background-section" >
 
-            </div>
+    </div>
+</section>
 
-        </main>
 
-        <div class="description">
-            <h1>¿Que es el Simposio?</h1>
-        
+
+<section>
+    <div class="description">
+        <h1>¿Que es el Simposio?</h1>
+
         <div class = "pharagraf">
             <p>"Desde el año 2012 se realiza una actividad denominada 
-            Simposio de Informática Empresarial, donde los alumnos, 
-            docentes, graduados, empresarios y público en general; 
-            Se reúnen para expresar el que hacer de la carrera por 
-            medio de ponencias, talleres, charlas y proyectos en 
-            torno a la temática que esta carrera compete." </p>
-            
+                Simposio de Informática Empresarial, donde los alumnos, 
+                docentes, graduados, empresarios y público en general; 
+                Se reúnen para expresar el que hacer de la carrera por 
+                medio de ponencias, talleres, charlas y proyectos en 
+                torno a la temática que esta carrera compete." </p>
+
             <img  class= "imagen" src="Images/Edificio principal.png" alt="imagen U"/>
         </div>
-            <p>Hola como estas </p>
-
-        </div>
-        
-        
-
-        <footer class="bg-primary text-white text-center py-3">
-            <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
-        </footer>
 
 
-    </body>
+    </div>
+</section>
+
+<section class = "activities">
+    <h1>ACTIVIDADES</h1>
+    
+</section>
+
+    <script src="../JS/Transitions.js"></script>
+</body>
+<footer >
+    <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
+</footer>
 </html>
+
+
+
+
+
