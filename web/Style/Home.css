@@ -39,7 +39,7 @@ body{
     background-color: #dbe9f5;
 }
 .custom-header{
-    background-color: #005da4;
+    background-color: #00c0f3;
     color: white;
     padding: 1rem;
     display: flex;
@@ -52,27 +52,28 @@ nav {
     display: flex;
     align-items: center;
     margin-left: auto;
-    background-color: #333;
+    background-color: white;
     padding: 30px 30px;
     backdrop-filter: blur(10px);
     transition: background-color 0.3s;
+    border-bottom: 1.4px solid #00c0f3;
 }
 
 
-nav a {
+nav a  {
 
-    color: white;
+    color: black;
     text-decoration: none;
-    margin-left: 15px;
-    font-size: 2rem;
+    font-size:1.5rem;
     position: relative;
     transition: color 0.3s,transform 0.3s;
-    padding: 0 10px;
-    border-right: 1px solid white;
+    padding: 0 20px;
+    border-right: 1px solid black;
+    text-align-last:auto;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #6dc067;
     transform: scale(1.2);
 }
 nav a:after {
@@ -83,26 +84,26 @@ nav a:after {
     display: block;
     margin-top: 5px;
     right: 0;
-    background: #ffd700;
+    background: black;
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover::after {
     width: 100%;
     left: 0;
-    background: #ffd700;
+    background: #6dc067;
 }
 
 .MenuIteam{
-    position:relative; 
+    position:relative;
 }
 
 .subMenu{
-    display: none; 
-    position: absolute; 
-    top: 100%; 
-    left:0; 
-    background-color: #45a049; 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:0;
+    background-color: #45a049;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -112,35 +113,35 @@ nav a:hover::after {
     border-top: 1px solid white;
 }
 .subMenu li a {
-    font-size: 20px; 
-    color: white; 
-    padding: 10px; 
-    display: block; 
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    display: block;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s; 
+    transition: background-color 0.3s, transform 0.3s;
     border-right: none;
-    
+
 }
 .subMenu li a:hover{
     color: #ffd700;
-    background-color: #444; 
+    background-color: #444;
     transform: none;
 }
 .MenuIteam.show.subMenu{
-    display: block; 
+    display: block;
 }
 
-.Description-simposio{
-    font-family: Arial, sans-serif; 
-    font-size: 30px; 
-    color: #333; 
-    line-height:1.5; 
-    margin-bottom: 10px; 
-    padding: 10px; 
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+.Description{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #333;
+    line-height:1.5;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -148,7 +149,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: #003366;
+    background-color: #00c0f3;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -187,8 +188,8 @@ footer {
 
 .titulo-container {
     text-align: center;
-    background: #ccc;
-    padding: 20px 40px;
+    background: #fff;
+    padding: 20px 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     animation: fadeIn 2s ease-out;
 }
@@ -205,40 +206,43 @@ footer {
 
 
 .titulo-grande {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+    font-size: auto;
+    font-style: normal;
+    font-size: 2em;
     margin-right: 10px;
 }
 
 
 .titulo-elegante {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+
 }
 
 @keyframes mover-izquierda-derecha{
-from{
-    transform:translateX(-90px);
-}
-to{
-    transform: translateX(35px);
-}
+    from{
+        transform:translateX(-90px);
+    }
+    to{
+        transform: translateX(35px);
+    }
 
 }
 @keyframes mover-izquierda-derecha-activities{
-from{
-    transform:translateX(-300px);
-}
-to{
-    transform: translateX(900px);
-}
+    from{
+        transform:translateX(-300px);
+    }
+    to{
+        transform: translateX(900px);
+    }
 
 }
 
 @keyframes mover-derecha-izquierda{
     from{
-        transform: translateX(50px); 
-        
+        transform: translateX(50px);
+
     }
     to{
         transform: translateX(-25px);
@@ -246,12 +250,12 @@ to{
 }
 
 @keyframes mover{
-from{
-    transform:translateX(10px);
-}
-to{
-    transform: translateX(40px);
-}
+    from{
+        transform:translateX(10px);
+    }
+    to{
+        transform: translateX(40px);
+    }
 
 }
 .pharagraf{
@@ -264,26 +268,27 @@ to{
 }
 
 .pharagraf p {
-     animation: mover 2s 1;
+    animation: mover 2s 1;
     animation-fill-mode: forwards;
 }
 
 .imagen{
-  margin-left: 10%;
-  width: 150%;
-  height: 150%;
-  border-radius: 8%;
-  transform: translate(-15px, 0);
-  transition: transform 1s ease-in-out;
-  animation: mover-derecha-izquierda 2s 1;
+    margin-left: 10%;
+    width: 150%;
+    height: 150%;
+    border-radius: 8%;
+    transform: translate(-15px, 0);
+    transition: transform 1s ease-in-out;
+    animation: mover-derecha-izquierda 2s 1;
     animation-fill-mode: forwards;
 }
 .description{
-font-family: Arial, sans-serif; 
-width: 80%;
-height: 50vh;
-margin: 0 auto;
-position: relative;
+
+    font-family: Arial, sans-serif;
+    width: 80%;
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
 }
 
 .description h1{
@@ -291,15 +296,15 @@ position: relative;
     animation-fill-mode: forwards;
 }
 .activities{
-    width: 100%; 
-    height: 50%; 
-    background-color: #000000; 
+    width: 100%;
+    height: 50%;
+    background-color: #000000;
 }
 
 .activities h1{
-     animation: mover-izquierda-derecha-activities 2s 1;
+    animation: mover-izquierda-derecha-activities 2s 1;
     animation-fill-mode: forwards;
-    color: #f0f0f0; 
+    color: #f0f0f0;
 }
 
 /* 
@@ -507,13 +512,13 @@ button:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-   
+
 }
 
 .mapa{
-     max-width: 100%;
+    max-width: 100%;
     height: auto;
-     margin-right: 10px;
+    margin-right: 10px;
 }
 
 .Title-Map{
@@ -522,71 +527,67 @@ button:hover {
 }
 
 .container{
-    display: flex; 
-    align-items: center; 
-    justify-content: left; 
+    display: flex;
+    align-items: center;
+    justify-content: left;
     height: 100%;
-    width: 100%; 
-    padding: 0 20px; 
+    width: 100%;
+    padding: 0 20px;
 }
 
 .card-container{
-    display: flex; 
-    width: 600px; 
-    height: auto; 
-    background: #f0f0f0; 
-    border-radius: 2px; 
-    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2); 
-    margin-left:  150px; 
+    display: flex;
+    width: 600px;
+    height: auto;
+    background: #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+    margin-left:  150px;
 }
 
 .header-card{
-    padding: 20px; 
-    text-align: center; 
+    padding: 20px;
+    text-align: center;
 }
 
 .header-card a{
-    position: relative; 
-    display: block; 
-    
+    position: relative;
+    display: block;
+
 }
 
 .header-card img{
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06); 
-    margin: 20px 30px; 
-    transition: .2s; 
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    margin: 20px 30px;
+    transition: .2s;
 }
 
 .header-card a:hover img{
-    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1); 
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
 }
 
 .description-card{
-    position: relative; 
-    
+    position: relative;
+
 }
 
 .description-card p{
-    text-align: center; 
-   margin: 150px auto 20px auto; 
-    
+    text-align: center;
+    margin: 150px auto 20px auto;
+
 }
 
 @media(max-width:648px){
     .card-Club-Centro{
-        display: block; 
-        width: 450px; 
+        display: block;
+        width: 450px;
     }
-    
+
     .header-Club{
-        padding: 20px 20px 5px 20px; 
-        border: none; 
+        padding: 20px 20px 5px 20px;
+        border: none;
     }
-    
-    .description{
-        padding: 5px 20px 20px 20px; 
-        background: transparent; 
-    }
+
 }
 .carousel-container {
     display: flex;

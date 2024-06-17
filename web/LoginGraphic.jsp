@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio de sesion</title>
         <link rel="stylesheet" href="Style/Home.css">
+        <link rel=""
     </head>
     <body>
         <header class="custom-header">
@@ -59,4 +60,5 @@
             <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
         </footer>
     </body>
+    
 </html>
