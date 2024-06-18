@@ -12,14 +12,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario de Registro</title>
         <link rel="stylesheet" href="Style/Home.css">
+        <link rel="stylesheet" href="Style/Registration.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.
+              3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYm
+              Dr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/boot
+    strap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLES
+    aAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </head>
     <body class="Registro">
 
         <header class="custom-header">
             <div class="logos">
-                <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
-                <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
-                <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
+                <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" 
+                     class=" logo-ucr">
+                <img src="Images/SSurHorizo.png" alt="Logotipo 
+                     Sede del Sur" class=" logo-sede">
+                <img src="Images/SSur-CIEhorizo.png" 
+                     alt="Logo de la carrera de Informatica Empresarial"
+                     class=" logo-carrera">
             </div>
 
         </header>

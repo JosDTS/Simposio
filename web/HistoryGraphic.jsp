@@ -1,8 +1,11 @@
+<%-- 
+    Document   : HistoryGraphic
+    Created on : 18 jun. 2024, 15:20:53
+    Author     : ESTUDIANTE
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>Historia</title>
@@ -11,8 +14,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <link rel="stylesheet" href="Style/Home.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:
+              wght@700&family=Raleway:wght@400;700&display=swap" 
+              rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css
+              /bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEj
+              ISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+              crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/j
+        s/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5
+        s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     </head>
     <header class="custom-header">
         <div class = "logos">
@@ -23,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
     </header>
     <body>
-        <nav>
+        <nav >
             <a href = "LoginGraphic.jsp">Login</a>
             <a href = "RegistrationGraphic.jsp">Registro</a>
             <a href = "#">Actividades</a>

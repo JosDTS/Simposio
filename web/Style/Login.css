@@ -1,0 +1,109 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 jun. 2024, 14:43:53
+    Author     : ESTUDIANTE
+*/
+
+.container3{
+
+    margin: auto;
+    overflow: hidden;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+    border-radius: 8px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-field label {
+    font-size: 16px;
+    color: #333;
+
+}
+
+.forget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.forget label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.forget a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffdd57;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.register {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
