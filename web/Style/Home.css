@@ -295,151 +295,131 @@ footer {
     animation: mover-izquierda-derecha 2s 1;
     animation-fill-mode: forwards;
 }
-.activities{
-    width: 100%;
-    height: 50%;
-    background-color: #000000;
-}
 
-.activities h1{
-    animation: mover-izquierda-derecha-activities 2s 1;
-    animation-fill-mode: forwards;
-    color: #f0f0f0;
-}
 
 /* 
     Carrusel
 */
-
-.carousel-container {
-    display: flex;
-    align-items: center;
-    width: 90%; /* Adjusted to 90% for better responsiveness */
-    max-width: 1200px; /* Added a max-width */
-    overflow: hidden;
-    position: relative;
-    padding: 0 20px; /* Added padding to prevent content from touching the edges */
-    box-sizing: border-box;
+.activities {
+    padding: 20px;
+    background-color: #e5b365;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-}
-
-.activity-card {
-    perspective: 1000px;
-    width: 800%;
-    max-width: 300px;
-    height: 300px;
-    margin: 0 15px;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.activity-card div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
+.carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 500px; 
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; 
+    max-width: 600px; 
+    margin: auto;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-.card-front {
-    background-color: #fff;
-    transform: rotateY(0deg);
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.card-back {
-    background-color: #073565;
-    color: #fff;
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+.flip-card:hover .flip-card-front img {
+    transform: scale(1.1); 
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: white;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
-.activity-card:hover .card-front {
-    transform: rotateY(-180deg);
-}
-
-.activity-card:hover .card-back {
-    transform: rotateY(0deg);
-}
-
-.activity-card img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto; /* Ensure images scale properly */
-    width: auto; /* Ensure images scale properly */
-}
-
-.card-back h3,
-.card-back p,
-.card-back a {
+.flip-card-back h5, .flip-card-back p {
     margin: 10px 0;
 }
 
-.card-back a {
-    color: #ffffff;
-    text-decoration: none;
-    border: 1px solid #000000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.flip-card-back h5 {
+     font-weight: bold; 
+    
 }
 
-.card-back a:hover {
-    background-color: #ffdd57;
-    color: #073565;
+.flip-card-back p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
 
-.carousel-button {
-    background-color: #38d7ff;
-    color: #fff;
-    border: none;
-    padding: 1%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-/* Nuevos estilos para la sección .activities y título animado */
-.activities {
-    width: 100%;
-    height: 50%;
-    background-color: #000000;
-}
-
-.activities h1 {
-    animation: mover-izquierda-derecha-activities 2s 1;
-    animation-fill-mode: forwards;
-    color: #f0f0f0;
-}
-
-@keyframes mover-izquierda-derecha-activities {
-    from {
-        transform: translateX(-300px);
+@media (max-width: 768px) {
+    .flip-card {
+        max-width: 90%; 
     }
-    to {
-        transform: translateX(900px);
+
+    .flip-card-back h5 {
+        font-size: 24px;
+    }
+
+    .flip-card-back p {
+        font-size: 14px;
     }
 }
+
+
+.flip-card-back .btn-inscripcion {
+    background-color: black; 
+    color: white; 
+    border: none; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    transition: background-color 0.3s; 
+}
+
+.flip-card-back .btn-inscripcion:hover {
+    background-color: yellow; 
+    color: black; 
+}
+
+.actividad-titulo {
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 24px; 
+}
+
