@@ -21,16 +21,16 @@ public class SaveUsers {
     public boolean save(String userType, String name,
             String email, String password, String identification, 
             String institution, String interestArea, String participantType)
-            throws Exception {
+            throws Exception { 
         String[] myArray = {userType, name, email, password, identification,
-            institution, interestArea, participantType};
+                           institution, interestArea, participantType};
+            
         String[] myArrayEncrypted = new String[myArray.length];
         for (int i = 0; i < myArray.length; i++) {
             myArrayEncrypted[i] = cr.encrypt(myArray[i]);
         }
         try {
-            final Path rutaArchivo = new File("C:\\Users\\Jeison\\Desktop\\"
-                    + "Proyecto Web\\Simposio\\UsersInformation.txt").toPath();
+            final Path rutaArchivo = new File("C:\\Users\\Jeison\\Desktop\\Proyecto Web\\Simposio\\UsersInformation.txt").toPath();
             BufferedWriter writer = new BufferedWriter(
                     new FileWriter(rutaArchivo.toString(), true));
             for (int i = 0; i < myArrayEncrypted.length; i++) {

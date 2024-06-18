@@ -33,7 +33,7 @@
                     
                 }else{
                 String url = "RegistrationGraphic.jsp";
-                  response.sendRedirect(url);
+                response.sendRedirect(url);
             }
         %>
     </body>

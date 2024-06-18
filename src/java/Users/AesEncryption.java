@@ -17,9 +17,7 @@ import java.util.Base64;
  *
  * @author Jocelyn
  * @author Jeison
- * @author Joseph
  * @author Adrian
- * @author Carlos
  *
  */
 public class AesEncryption {
