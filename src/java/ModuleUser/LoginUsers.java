@@ -24,7 +24,7 @@ public class LoginUsers {
     public boolean login(String password, String email) throws IOException, Exception {
         AesEncryption cr = new AesEncryption();
         try {
-            final Path rutaArchivo = new File("C:\\Users\\Jeison\\Desktop\\Proyecto Web\\Simposio\\UsersInformation.txt").toPath();
+            final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt").toPath();
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(Files.newInputStream(rutaArchivo),
                             StandardCharsets.UTF_8));

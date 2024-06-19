@@ -30,7 +30,7 @@ public class SaveUsers {
             myArrayEncrypted[i] = cr.encrypt(myArray[i]);
         }
         try {
-            final Path rutaArchivo = new File("C:\\Users\\Jeison\\Desktop\\Proyecto Web\\Simposio\\UsersInformation.txt").toPath();
+            final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt").toPath();
             BufferedWriter writer = new BufferedWriter(
                     new FileWriter(rutaArchivo.toString(), true));
             for (int i = 0; i < myArrayEncrypted.length; i++) {
