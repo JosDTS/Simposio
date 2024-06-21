@@ -7,3 +7,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : ESTUDIANTE
 */
 
+.imagen-background{
+
+    height: 900%;
+    width: 1500%;
+    opacity: 20%;
+    
+    object-fit: contain;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: calc;
+}
+
+.col-md-12{
+    padding: 10px;
+    text-height: auto;   
+}
+.History-box{
+    background-color: transparent;
+    align-items: center;
+}
+

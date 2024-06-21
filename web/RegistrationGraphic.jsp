@@ -19,9 +19,7 @@
               Dr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     </head>
-    <body class="Registro">
-
-        <header class="custom-header">
+    <header class="custom-header">
             <div class="logos">
                 <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" 
                      class=" logo-ucr">
@@ -33,12 +31,14 @@
             </div>
 
         </header>
-        <nav>
+    <body class="Registro"> 
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <a href = "index.html">Inicio</a>
             <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
+            <a href = "#">Actividades</a>
             <a href = "#">Contacto</a>
         </nav>
-        <div class="container2">
+        <div class="container2" >
 
             <h2>Formulario de Registro</h2>
             <form action="Registration.jsp" method="post" id="registrationForm">

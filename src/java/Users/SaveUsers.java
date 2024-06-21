@@ -35,7 +35,7 @@ public class SaveUsers {
                     new FileWriter(rutaArchivo.toString(), true));
             for (int i = 0; i < myArrayEncrypted.length; i++) {
                 writer.write(myArrayEncrypted[i] + ",");
-            }
+            }         
             writer.newLine();
             writer.close();
             return true;
