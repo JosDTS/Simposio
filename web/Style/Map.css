@@ -12,80 +12,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 
 .mapa{
-    max-width: 100%;
+     max-width: 100%;
     height: auto;
-    margin-right: 10px;
-}
-
-.Title-Map{
-    animation: mover-izquierda-derecha 2s 1;
-    animation-fill-mode: forwards;
-}
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    height: 100%;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.card-container{
-    display: flex;
-    width: 600px;
-    height: auto;
-    background: #f0f0f0;
-    border-radius: 2px;
-    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
-    margin-left:  150px;
-}
-
-.header-card{
-    padding: 20px;
-    text-align: center;
-}
-
-.header-card a{
-    position: relative;
-    display: block;
-
-}
-
-.header-card img{
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
-    margin: 20px 30px;
-    transition: .2s;
-}
-
-.header-card a:hover img{
-    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
-}
-
-.description-card{
-    position: relative;
-
-}
-
-.description-card p{
-    text-align: center;
-    margin: 150px auto 20px auto;
-
-}
-
-@media(max-width:648px){
-    .card-Club-Centro{
-        display: block;
-        width: 450px;
-    }
-
-    .header-Club{
-        padding: 20px 20px 5px 20px;
-        border: none;
-    }
-
 }
