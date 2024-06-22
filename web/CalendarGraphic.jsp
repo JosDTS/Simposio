@@ -7,114 +7,169 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calendario de Actividades del Simposio</title>
-        <link rel="stylesheet" href="Style/Home.css">
-        <link rel="stylesheet" href="Style/Calendar.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Actividades del Simposio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Style/Home.css">
+    <link rel="stylesheet" href="Style/Calendar.css">
+</head>
+<body>
     <header class="custom-header">
-        <div class = "logos">
-            <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class=" logo-ucr">
-            <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class=" logo-sede">
-            <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
+        <div class="logos">
+            <img src="Images/LogoUCR.png" alt="Universidad de Costa Rica" class="logo-ucr">
+            <img src="Images/SSurHorizo.png" alt="Logotipo de la Sede del Sur" class="logo-sede">
+            <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class="logo-carrera">
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <a href="index.html">Inicio</a>
+        <a href="LoginGraphic.jsp">Login</a>
+        <a href="RegistrationGraphic.jsp">Registro</a>
+        <a href="CalendarGraphic.jsp">Actividades</a>
+        <div class="MenuIteam">
+            <a class="a" href="MapaGraphic.jsp" id="mapa">Mapa</a>
+            <ul class="subMenu" id="submenu">
+                <li><a href="#">Golfito</a></li>
+                <li><a href="#">SedeSur</a></li>
+            </ul>
+        </div>
+        <a href="HistoryGraphic.jsp">Historia</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <main class="container">
+        
+        <div class="main-title">
+            <h2>Calendario de Actividades del Simposio<span>2024</span></h2>
         </div>
 
-    </header>
-    <body> 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <a href ="index.html">Inicio</a>
-            <a href = "LoginGraphic.jsp">Login</a>
-            <a href = "RegistrationGraphic.jsp">Registro</a>
-            <a href = "CalendarGraphic.jsp">Actividades</a>
-            <div class="MenuIteam">
-                <a class ="a" href = "MapaGraphic.jsp" id="mapa">Mapa</a>
-                <ul class="subMenu" id="submenu">
-                    <li><a href ="#">Golfito</a></li>
-                    <li><a href ="#">SedeSur</a></li>
-                </ul>
+       
+        <div class="input-group mb-3 search-bar">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar actividades...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="searchButton" type="button">Buscar</button>
             </div>
-            <a href = "HistoryGraphic.jsp">Historia</a>
-            <a href = "#">Contacto</a>
-        </nav>
+        </div>
 
-        <main> 
-            <section class="calendar"> 
-                <div class="day"> 
-                    <h2>25 de Junio de 2024</h2> 
-                    <div class="row"> 
-                        <div class="col-md-6"> 
-                            <div class="activity"> 
-                                <h3>Conferencia sobre Inteligencia Artificial</h3> 
-                                <p><i class="far fa-clock"></i> 10:00 AM</p> 
-                                <p><i class="fas fa-map-marker-alt"></i> Auditorio 1</p> 
-                                <p><i class="fas fa-user"></i> <span>Dr. Juan Pérez</span></p> 
-                                <!-- Añadir un icono para la foto --> 
-                                <img src="https://es.visafoto.com/img/source355x388_co.jpg" alt="Conferencia sobre Inteligencia Artificial"> 
-                                <button class="btn btn-primary mt-2 more-details-btn" data-toggle="collapse" data-target="#details1">Más detalles</button> 
-                                <a href="#" class="btn btn-success mt-2 ml-2 register-btn">Inscribirse</a> 
-                            </div> 
-                        </div> 
-                        <div class="col-md-6"> 
-                            <div id="details1" class="collapse activity-details"> 
-                                <article class="activity-info"> 
-                                    <h2>Conferencia sobre Inteligencia Artificial</h2> 
-                                    <p><strong>Resumen:</strong> Una conferencia donde expertos en IA discuten las últimas tendencias y avances en la industria.</p> 
-                                    <h3>Ponente: Dr. Juan Pérez</h3> 
-                                    <p><strong>Biografía:</strong> Dr. Juan Pérez es un investigador reconocido en el campo de la inteligencia artificial con más de 20 años de experiencia.</p> 
-                                </article> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
+        
+        <div class="calendar">
+            <div class="day">
+                <div class="activity">
+                    <h3>Foros de Innovación en IA:</h3>
+                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                    <p><i class="fas fa-clock"></i> 10:00 AM</p>
+                    <p><i class="fas fa-user"></i> Juan Pérez</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sala 1</p>
+                    <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 1">
+                    <div class="activity-details">
+                        <p>Descripción: Espacios colaborativos donde expertos en inteligencia artificial, 
+                            innovación y estrategia empresarial discuten tendencias emergentes,
+                            oportunidades de mercado y el futuro de la IA en diferentes sectores industriales.</p>
+                        <p>Biografía del ponente Juan Pérez...</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="activity">
+                    <h3>Simulacros de Ataques Cibernéticos</h3>
+                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                    <p><i class="fas fa-user"></i> María López</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                    <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                    <div class="activity-details">
+                        <p>Descripción: Ejercicios prácticos donde los participantes simularán escenarios de ataques 
+                            cibernéticos para comprender mejor las amenazas actuales 
+                            y cómo responder ante ellas. Se discutirán técnicas de defensa y protección de datos críticos.</p>
+                        <p>Biografía del ponente María López...</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+               <div class="day">
+                <div class="activity">
+                    <h3>Mesas Redondas sobre Regulación de Datos y Privacidad</h3>
+                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                    <p><i class="fas fa-user"></i> María López</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                    <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                    <div class="activity-details">
+                        <p>Descripción: Debates enfocados en la regulación de datos personales 
+                            y privacidad en el contexto de la inteligencia artificial. 
+                            Se explorarán políticas vigentes, desafíos éticos y 
+                            recomendaciones para empresas que manejan grandes volúmenes de datos.</p>
+                        <p>Biografía del ponente María López...</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+               <div class="day">
+                <div class="activity">
+                    <h3>Seminarios sobre Responsabilidad Ética en IA</h3>
+                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                    <p><i class="fas fa-user"></i> María López</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                    <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                    <div class="activity-details">
+                        <p>Descripción: Seminarios dedicados a explorar los aspectos éticos de la inteligencia artificial, 
+                            centrados en cómo las empresas pueden asegurar que sus aplicaciones de IA sean éticamente responsables y socialmente beneficiosas.</p>
+                        <p>Biografía del ponente María López...</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+               <div class="day">
+                <div class="activity">
+                    <h3>Sesiones de Networking y Ferias Tecnológicas</h3>
+                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                    <p><i class="fas fa-user"></i> María López</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                    <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                    <div class="activity-details">
+                        <p>Descripción: Espacios informales para que participantes, conferencistas y empresas patrocinadoras interactúen, 
+                            compartan ideas y establezcan contactos comerciales. 
+                            Incluirán demostraciones de tecnologías emergentes y soluciones innovadoras en IA y ciberseguridad.</p>
+                        <p>Biografía del ponente María López...</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Más actividades -->
+        </div>
+    </main>
 
-                <!-- Repetir el mismo patrón para las otras actividades con IDs únicos --> 
-                <div class="day"> 
-                    <h2>26 de Junio de 2024</h2> 
-                    <div class="row"> 
-                        <div class="col-md-6"> 
-                            <div class="activity"> 
-                                <h3>Taller de Robótica Avanzada</h3> 
-                                <p><i class="far fa-clock"></i> 2:00 PM</p> 
-                                <p><i class="fas fa-map-marker-alt"></i> Sala de Taller</p> 
-                                <p><i class="fas fa-user"></i> <span>Ing. María López</span></p> 
+    <footer>
+        <p>&copy; 2024 Universidad. Todos los derechos reservados.</p>
+    </footer>
 
-                                <img src="https://via.placeholder.com/150" alt="Taller de Robótica Avanzada"> 
-                                <button class="btn btn-primary mt-2 more-details-btn" data-toggle="collapse" data-target="#details2">Más detalles</button> 
-                                <a href="#" class="btn btn-success mt-2 ml-2 register-btn">Inscribirse</a> 
-                            </div> 
-                        </div> 
-                        <div class="col-md-6"> 
-                            <div id="details2" class="collapse activity-details"> 
-                                <article class="activity-info"> 
-                                    <h2>Taller de Robótica Avanzada</h2> 
-                                    <p><strong>Resumen:</strong> Un taller práctico para aprender sobre programación y diseño de robots avanzados.</p> 
-                                    <h3>Instructora: Ing. María López</h3> 
-                                    <p><strong>Biografía:</strong> Ing. María López tiene una vasta experiencia en robótica y ha liderado varios proyectos innovadores en el campo.</p> 
-                                </article> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-
-
-            </section> 
-        </main> 
-
-        <footer> 
-            <p>&copy; 2024 Universidad. Todos los derechos reservados.</p> 
-        </footer> 
-        <!<!-- JS Boostrap -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-
-
-    </body>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script para búsqueda de actividades -->
+    <script src="JS/searchActivities.js"></script>
+</body>
 </html>
+
