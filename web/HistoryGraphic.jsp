@@ -32,34 +32,30 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-        <a href ="index.html">Inicio</a>
-        <a href ="LoginGraphic.jsp">Login</a>
-        <a href = "RegistrationGraphic.jsp">Registro</a>
-        <a href = "CalendarGraphic.jsp">Actividades</a>
-        <div class="MenuIteam">
-            <a href = "MapaGraphic.jsp" id="mapa">Mapa</a>
-            <ul class="subMenu" id="submenu">
-                <li><a href ="#">Golfito</a></li>
-                <li><a href ="#">SedeSur</a></li>
-            </ul>
-        </div>
-        <a href = "HistoryGraphic.jsp">Historia</a>
-        <a href = "#">Contacto</a>
-
-    </nav>
-        <section class="History-box">
-        <div class="container-lg">
-            <div class="imagen-background">
-                <img src="Images/La bomba.png" alt="Universidad de Costa Rica" class=" logo-ucr">
-
+            <a href ="index.html">Inicio</a>
+            <a href ="LoginGraphic.jsp">Login</a>
+            <a href = "RegistrationGraphic.jsp">Registro</a>
+            <a href = "CalendarGraphic.jsp">Actividades</a>
+            <div class="MenuIteam">
+                <a href = "MapaGraphic.jsp" id="mapa">Mapa</a>
+                <ul class="subMenu" id="submenu">
+                    <li><a href ="#">Golfito</a></li>
+                    <li><a href ="#">SedeSur</a></li>
+                </ul>
             </div>
+            <a href = "HistoryGraphic.jsp">Historia</a>
+            <a href = "#">Contacto</a>
+
+        </nav>
+        <section class="History-box" >
+
 
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center mx-auto">Historia de Golfito</h1>
                 </div>
-            </div>
-            <div class="row">
+
+
                 <div class="col-md-12">
                     <p class="text-justify lead" style="padding: 20px;">
                         En la época precolombina, el territorio que actualmente 
@@ -83,13 +79,13 @@
                         cantón de Puntarenas).
                     </p>
                 </div>
-            </div>
-            <div class="row">
+
+
                 <div class="col-md-12">
                     <h1 class="text-center mx-auto">La Bananera</h1>
                 </div>
-            </div>
-            <div class="row">
+
+
                 <div class="col-md-12">
                     <p class="text-justify lead" style="padding: 20px;">
                         En ley No 20 del 18 de octubre de 1915, sobre división 
@@ -111,13 +107,11 @@
                         del principal enclave bananero del país.
                     </p>
                 </div>
-            </div>
-            <div class="row">
+
+
                 <div class="col-md-12">
                     <h2 class="text-center mx-auto">La Actualidad</h2>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-md-12">
                     <p class="text-justify lead" style="padding: 20px;">  
                         En el cantón de Golfito, se ubica el Depósito Libre Comercial 
@@ -136,19 +130,14 @@
                         es la pesca deportiva.
 
                 </div>
-            </div>
-        </div>
+        </section>
 
-
-
-    </section>
-
-    <footer >
-        <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/j
-            s/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5
-            s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
+        <footer >
+            <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/j
+                s/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5
+                s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    </body>
 </html>

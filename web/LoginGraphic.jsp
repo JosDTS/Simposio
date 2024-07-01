@@ -22,45 +22,57 @@
             <img src="Images/SSur-CIEhorizo.png" alt="Logo de la carrera de Informatica Empresarial" class=" logo-carrera">
         </div>
     </header>
-    <body>
+    <body class="body-login">
 
-        <nav class="navbar navbar-expand-sm bg-body-tertiary"> 
-            <a href = "index.html">Inicio</a>
-            <a href = "RegistrationGraphic.jsp">Registrarse</a>
-            <a href = "#">Contacto</a>
 
-        </nav>
-        <form id="loginForm" action="Login.jsp" method="Post">
-            <div class="container3">           
-                <h2 class="login-header">Inicio de Sesión</h2>
-                <div class="input-field">
-                    <label for="email">Introduce tu email</label>
-                    <input name ="email" type="text" required>
+        <div class="wrapper">
+
+            <nav class="navbar navbar-expand-sm bg-body-tertiary"> 
+                <a href = "index.html">Inicio</a>
+                <a href = "RegistrationGraphic.jsp">Registrarse</a>
+                <a href = "#">Contacto</a>
+
+            </nav>
+            <form id="loginForm" action="Login.jsp" method="Post">
+                <div class="container3">
+
+                    <h2 class="login-header">Inicio de Sesión</h2>
+                    <div class="input-field">
+                        <label for="email">Introduce tu email</label>
+                        <input name ="email" type="text" required>
+
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Introduce tu contraseña</label>
+                        <input name ="password" type="password" required>
+
+                    </div>
+                    <div class="forget">               
+                        <label for="remember">
+                            <input type="checkbox" id="remember">
+                            <span>Recordarme</span>
+                        </label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Entrar</button>
+                    </div>
+
+                    <div class="register">
+                        <p>¿No tienes una cuenta? <a href="Registration.jsp">Registrarse</a></p>
+                    </div>
 
                 </div>
-                <div class="input-field">
-                    <label for="password">Introduce tu contraseña</label>
-                    <input name ="password" type="password" required>
+            </form>
+            <section class="space">
 
-                </div>
-                <div class="forget">               
-                    <label for="remember">
-                        <input type="checkbox" id="remember">
-                        <span>Recordarme</span>
-                    </label>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                </div>
-                <button type="submit">Entrar</button>
-                <div class="register">
-                    <p>¿No tienes una cuenta? <a href="Registration.jsp">Registrarse</a></p>
-                </div>
+            </section>
 
-            </div>
-        </form>
-
-        <footer class="bg-primary text-white text-center py-3">
+        </div>
+        <footer >
             <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
         </footer>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     </body>

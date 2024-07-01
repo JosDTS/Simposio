@@ -14,7 +14,7 @@
     </head>
     <body>
         <%
-            String email = request.getParameter("email");
+         String email = request.getParameter("email");
             String password = request.getParameter("password");
 
             LoginUsers lg = new LoginUsers();
@@ -26,7 +26,7 @@
                 String url = "RegistrationGraphic.jsp";
                 response.sendRedirect(url);
             }
-
+   
         %>
     </body>
 </html>

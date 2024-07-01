@@ -32,13 +32,14 @@
 
         </header>
     <body class="Registro"> 
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary" class="na">
             <a href = "index.html">Inicio</a>
             <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
-            <a href = "#">Actividades</a>
+            <a href = "CalendarGraphic.jsp">Actividades</a>
             <a href = "#">Contacto</a>
         </nav>
-        <div class="container2" >
+        
+        <div class="container2" class="mb-3">
 
             <h2>Formulario de Registro</h2>
             <form action="Registration.jsp" method="post" id="registrationForm">
@@ -76,7 +77,7 @@
                 </select>
 
                 <button type="submit">Registrarse</button>
-                <img src="Images/SSur-CIEhorizo.png" alt="" class="logo-carrera">
+                
             </form>
         </div>
         <footer class="bg-primary text-white text-center py-3">

@@ -7,6 +7,7 @@ package ModuleUser;
 import Users.AesEncryption;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -24,10 +25,11 @@ public class LoginUsers {
     public boolean login(String password, String email) throws IOException, Exception {
         AesEncryption cr = new AesEncryption();
         try {
-            final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt").toPath();
+            final String directorioDeTrabajo = System.getProperty("UsersInformation.txt");
+
+            //final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt").toPath();
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(Files.newInputStream(rutaArchivo),
-                            StandardCharsets.UTF_8));
+                    new FileReader(directorioDeTrabajo));
             String linea = "";
             while ((linea = reader.readLine()) != null) {
                 String[] datos = linea.split(",");
