@@ -34,6 +34,7 @@
         <a href="LoginGraphic.jsp">Login</a>
         <a href="RegistrationGraphic.jsp">Registro</a>
         <a href="CalendarGraphic.jsp">Actividades</a>
+         <a href="Speaker.jsp">Ponentes</a>
         <div class="MenuIteam">
             <a class="a" href="MapaGraphic.jsp" id="mapa">Mapa</a>
             <ul class="subMenu" id="submenu">
