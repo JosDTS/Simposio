@@ -32,7 +32,7 @@
 
         </header>
     <body class="Registro"> 
-        <nav class="navbar navbar-expand-sm bg-body-tertiary" class="na">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <a href = "index.html">Inicio</a>
             <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
             <a href = "CalendarGraphic.jsp">Actividades</a>
