@@ -25,11 +25,14 @@ public class LoginUsers {
     public boolean login(String password, String email) throws IOException, Exception {
         AesEncryption cr = new AesEncryption();
         try {
-            final String directorioDeTrabajo = System.getProperty("UsersInformation.txt");
 
-            //final Path rutaArchivo = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt").toPath();
+            File file = new File("UsersInformation.txt");
+
+            // Obtiene la ruta absoluta del archivo
+            String absolutePath = file.getAbsolutePath();
+            System.out.println("Ruta absoluta: " + absolutePath);
             BufferedReader reader = new BufferedReader(
-                    new FileReader(directorioDeTrabajo));
+                    new FileReader(absolutePath));
             String linea = "";
             while ((linea = reader.readLine()) != null) {
                 String[] datos = linea.split(",");

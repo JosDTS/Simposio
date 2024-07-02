@@ -19,24 +19,29 @@ public class SaveUsers {
     AesEncryption cr = new AesEncryption();
 
     public boolean save(String userType, String name,
-            String email, String password, String identification, 
+            String email, String password, String identification,
             String institution, String interestArea, String participantType)
-            throws Exception { 
+            throws Exception {
         String[] myArray = {userType, name, email, password, identification,
-                           institution, interestArea, participantType};
-            
+            institution, interestArea, participantType};
+
         String[] myArrayEncrypted = new String[myArray.length];
         for (int i = 0; i < myArray.length; i++) {
             myArrayEncrypted[i] = cr.encrypt(myArray[i]);
         }
         try {
-            String directorioDeTrabajo = System.getProperty("UsersInformation.txt");
-            System.out.println(directorioDeTrabajo);
+            // Crear un objeto File con la ruta del archivo
+            File file = new File("UsersInformation.txt");
+
+            // Obtener la ruta absoluta del archivo
+            String absolutePath = file.getAbsolutePath();
+            System.out.println("Ruta absoluta: " + absolutePath);
+         
             BufferedWriter writer = new BufferedWriter(
-            new FileWriter(directorioDeTrabajo, true));
+                    new FileWriter(absolutePath, true));
             for (int i = 0; i < myArrayEncrypted.length; i++) {
                 writer.write(myArrayEncrypted[i] + ",");
-            }         
+            }
             writer.newLine();
             writer.close();
             return true;

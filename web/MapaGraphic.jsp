@@ -23,9 +23,15 @@
 
     </header>
     <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <a href = "index.html">Inicio</a>
+            <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
+            <a href = "CalendarGraphic.jsp">Actividades</a>
+            <a href = "#">Contacto</a>
+        </nav>
         <h1 class="Title-Map">MAPA ITERATIVO DE LA SEDE DEL SUR  </h1>
         <div class="container-map">
-
+            
             <img src="Images/Mapa.png" alt="MapaSSur"  usemap="#mapa" class="mapa"/>
             <map id="mapa">
 
