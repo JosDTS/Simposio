@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="Style/Home.css">
-    <link rel="stylesheet" href="Style/Presenters.css">
+    <link rel="stylesheet" href="Style/Speaker.css">
 </head>
 <body>
     <header class="custom-header">

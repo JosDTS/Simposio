@@ -3,17 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
 
-document.getElementById('searchButton').addEventListener('click', function() {
-    var filter = document.getElementById('searchInput').value.toLowerCase();
-    var activities = document.querySelectorAll('.activity');
+document.addEventListener('DOMContentLoaded', () => {
+    const inscribirseButtons = document.querySelectorAll('.btn-inscribirse');
 
-    activities.forEach(function(activity) {
-        var text = activity.textContent.toLowerCase();
-        if (text.includes(filter)) {
-            activity.parentElement.style.display = '';
-        } else {
-            activity.parentElement.style.display = 'none';
-        }
+    inscribirseButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const activityName = this.closest('.activity').querySelector('h3').innerText;
+            
+            fetch('InscribirseServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ activityName: activityName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Inscripción exitosa');
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al inscribirse. Por favor, intente nuevamente más tarde.');
+            });
+        });
     });
 });
 

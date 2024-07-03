@@ -7,6 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
+     <!-- Script para búsqueda de actividades -->
+    <script src="JS/searchActivities.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,8 +171,17 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Script para búsqueda de actividades -->
-    <script src="JS/searchActivities.js"></script>
+   
 </body>
+
+<servlet>
+    <servlet-name>InscribirseServlet</servlet-name>
+    <servlet-class>com.example.Checking.InscribirseServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>InscribirseServlet</servlet-name>
+    <url-pattern>/InscribirseServlet</url-pattern>
+</servlet-mapping>
+
 </html>
 

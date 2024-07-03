@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -22,13 +24,13 @@ import java.nio.file.Path;
  */
 public class LoginUsers {
 
-    public boolean login(String password, String email) throws IOException, Exception {
+    public boolean login(HttpServletRequest request, String password, String email) throws IOException, Exception {
         AesEncryption cr = new AesEncryption();
         try {
 
-            File file = new File("UsersInformation.txt");
+            File file = new File("C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\UsersInformation.txt");
 
-            // Obtiene la ruta absoluta del archivo
+           
             String absolutePath = file.getAbsolutePath();
             System.out.println("Ruta absoluta: " + absolutePath);
             BufferedReader reader = new BufferedReader(
@@ -40,6 +42,9 @@ public class LoginUsers {
                 String passwordDecrypt = cr.decrypt(datos[3]);
 
                 if (emailDecrypt.equals(email) && passwordDecrypt.equals(password)) {
+                   
+                    HttpSession session = request.getSession();
+                    session.setAttribute("usuarioLogueado", email);
                     return true;
                 }
             }
@@ -47,5 +52,16 @@ public class LoginUsers {
         } catch (IOException iOException) {
         }
         return false;
+    }
+
+    public boolean isUserLoggedIn(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String usuarioLogueado = (String) session.getAttribute("usuarioLogueado");
+        return usuarioLogueado != null;
+    }
+
+    public void logoutUser(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
     }
 }

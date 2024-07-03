@@ -14,19 +14,17 @@
     </head>
     <body>
         <%
-         String email = request.getParameter("email");
+            String email = request.getParameter("email");
             String password = request.getParameter("password");
 
             LoginUsers lg = new LoginUsers();
-            if (lg.login(password, email)) {
-                session.setAttribute("usuarioLogueado", email);
-                String url = "index.html";
-                response.sendRedirect(url);
+            if (lg.login(request, password, email)) {
+                
+                response.sendRedirect("index.html");
             } else {
-                String url = "RegistrationGraphic.jsp";
-                response.sendRedirect(url);
+                
+                response.sendRedirect("RegistrationGraphic.jsp");
             }
-   
         %>
     </body>
 </html>
