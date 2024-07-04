@@ -1,7 +1,9 @@
 <%-- 
     Document   : Registration
     Created on : 11 jun. 2024, 15:46:27
-    Author     : ESTUDIANTE
+* @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page import="Users.SaveUsers"%>

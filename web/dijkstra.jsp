@@ -1,7 +1,9 @@
 <%-- 
     Document   : dijkstra
     Created on : 3 jul. 2024, 16:24:15
-    Author     : Sheys
+   * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 <%@page import="Dijkstra.Dijkstra"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,9 +20,7 @@
     String startVertex = request.getParameter("startVertex");
     String endVertex = request.getParameter("endVertex");
 
-    //Dijkstra dks = new Dijkstra();
-    //String shortestPath = dks.calcularRutaMasCorta(startVertex, endVertex );
-    //double distancia = dks.calcularDistancia(startVertex, endVertex);
+  
 
   
 %>

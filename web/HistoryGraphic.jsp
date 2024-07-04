@@ -1,7 +1,9 @@
 <%-- 
     Document   : HistoryGraphic
     Created on : 18 jun. 2024, 15:20:53
-    Author     : ESTUDIANTE
+   * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

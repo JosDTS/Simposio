@@ -27,7 +27,7 @@ nextButton.addEventListener('click', () => {
   updateCarousel();
 });
 
-// Autoplay
+
 let autoplayInterval;
 function startAutoplay() {
   autoplayInterval = setInterval(() => {

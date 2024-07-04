@@ -13,7 +13,9 @@ import java.io.IOException;
  * Class responsible for saving user information in a text file.
  * It uses the AesEncryption class to encrypt the data before saving it.
  * 
- * @author ESTUDIANTE
+ * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
  */
 public class SaveUsers {
     

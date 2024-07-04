@@ -1,7 +1,9 @@
 <%-- 
     Document   : Registration
     Created on : 9 jun. 2024, 15:37:38
-    Author     : chava
+ * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

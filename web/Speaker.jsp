@@ -1,7 +1,9 @@
 <%-- 
     Document   : Speaker
     Created on : 2 jul. 2024, 12:09:15
-    Author     : chava
+  * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

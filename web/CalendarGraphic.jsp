@@ -1,7 +1,9 @@
 <%-- 
     Document   : CalendarGraphic
     Created on : 19 jun. 2024, 16:11:43
-    Author     : ESTUDIANTE
+* @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

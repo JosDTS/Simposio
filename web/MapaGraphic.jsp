@@ -1,7 +1,9 @@
 <%-- 
     Document   : MapaGraphic
     Created on : 17 jun. 2024, 02:38:22
-    Author     : ESTUDIANTE
+* @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 <%@page import="Dijkstra.Dijkstra"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

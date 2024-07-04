@@ -17,6 +17,9 @@ import ModuleUser.LoginUsers;
 /**
  * The InscribirseServlet class is a Java Servlet that handles the registration process for activities.
  * It manages the available slots for each activity and the registration of users.
+ * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
  */
 @WebServlet(name = "InscribirseServlet", urlPatterns = {"/InscribirseServlet"})
 public class InscribirseServlet extends HttpServlet {

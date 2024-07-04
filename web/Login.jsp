@@ -1,7 +1,9 @@
 <%-- 
     Document   : Login
     Created on : 11 jun. 2024, 16:16:56
-    Author     : ESTUDIANTE
+   * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page import="ModuleUser.LoginUsers"%>

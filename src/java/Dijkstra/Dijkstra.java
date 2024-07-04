@@ -8,6 +8,9 @@ import java.util.*;
 
 /**
  * The Dijkstra class provides a method to calculate the shortest path between two vertices in a graph using Dijkstra's algorithm.
+ * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
  */
 public class Dijkstra {
     /**

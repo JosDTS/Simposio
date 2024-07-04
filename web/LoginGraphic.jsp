@@ -1,7 +1,9 @@
 <%-- 
     Document   : Login
     Created on : 7 jun. 2024, 11:25:38
-    Author     : ESTUDIANTE
+  * @author Jocelyn
+ * @author Jeison
+ * @author Adrian 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
