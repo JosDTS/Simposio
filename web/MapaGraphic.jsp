@@ -257,7 +257,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png"  class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/CasetaGuardias.jpg"  class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -282,7 +282,9 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png" class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/ResiPro3.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/ResiProf1.jpg.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/ResiProf2.jpg.jpg.jpg" class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -307,7 +309,8 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png" class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/ResiEst1.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/resiEstu2.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -331,7 +334,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png"  class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/Asocia.jpg"  class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -381,7 +384,12 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png" class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/EdfBiblioteca.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/Biologia.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/CentroCultu.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/Biblioteca.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    <img src="Images/SalonMulti.jpg" class="img-fluid mr-4 w-100 mb-5" alt="alt"/>
+                                    
                                 </div>
 
                                 <!-- Modal footer -->
@@ -405,7 +413,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png"  class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/Edf4624.jpg"  class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -430,7 +438,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png" class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/Edf4625.jpg" class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
@@ -454,7 +462,7 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <img src="Images/ClubCentro.png"  class="img-fluid mr-4 w-100" alt="alt"/>
+                                    <img src="Images/Coordinacion.jpg"  class="img-fluid mr-4 w-100" alt="alt"/>
                                 </div>
 
                                 <!-- Modal footer -->
