@@ -188,7 +188,7 @@ footer {
         background-image: url("../Images/Letrero.png")
     }
     100%{
-        background-image: url("../Images/ClubCentro.png")
+        background-image: url("../Images/Letrero2.png")
     }
 
 }
@@ -309,7 +309,7 @@ footer {
 */
 .activities {
     padding: 20px;
-    background-color: #e5b365;
+    background-color: transparent;
 }
 
 .carousel-item {
