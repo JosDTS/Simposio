@@ -295,7 +295,15 @@
                 <!-- Más actividades -->
             </div>
         </main>
-
+        
+    <servlet>
+        <servlet-name>InscribirseServlet</servlet-name>
+        <servlet-class>com.example.Checking.InscribirseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InscribirseServlet</servlet-name>
+        <url-pattern>/InscribirseServlet</url-pattern>
+    </servlet-mapping>
         <footer class="footer">
 
             <div class="container">
@@ -326,14 +334,6 @@
 
     </body>
 
-    <servlet>
-        <servlet-name>InscribirseServlet</servlet-name>
-        <servlet-class>com.example.Checking.InscribirseServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>InscribirseServlet</servlet-name>
-        <url-pattern>/InscribirseServlet</url-pattern>
-    </servlet-mapping>
 
 </html>
 
