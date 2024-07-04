@@ -31,31 +31,20 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-light">
         <a href="index.html">Inicio</a>
-        <a href="LoginGraphic.jsp">Login</a>
-        <a href="RegistrationGraphic.jsp">Registro</a>
         <a href="CalendarGraphic.jsp">Actividades</a>
-        <div class="MenuIteam">
-            <a class="a" href="MapaGraphic.jsp" id="mapa">Mapa</a>
-            <ul class="subMenu" id="submenu">
-                <li><a href="#">Golfito</a></li>
-                <li><a href="#">SedeSur</a></li>
-            </ul>
-        </div>
-        <a href="HistoryGraphic.jsp">Historia</a>
-        <a href="#">Contacto</a>
     </nav>
 
     <main class="container">
         <div class="main-title">
-            <h2> Ponentes del simposio </h2>
+            <h2> Ponentes del Simposio </h2>
         </div>
 
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="Images/JuanPerez.jpg" class="card-img-top" alt="Juan Pérez">
+                    <img src="https://thumbs.dreamstime.com/b/l%C3%ADnea-icono-del-negro-avatar-perfil-de-usuario-121102131.jpg" class="card-img-top" alt="Juan Pérez">
                     <div class="card-body">
                         <h5 class="card-title">Juan Pérez</h5>
                         <p class="card-text"><span>Afiliación:</span> Universidad de Costa Rica</p>
@@ -66,7 +55,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://es.visafoto.com/img/docs/mx_passport_35x45.jpg" class="card-img-top" alt="María López">
+                    <img src="https://thumbs.dreamstime.com/b/l%C3%ADnea-icono-del-negro-avatar-perfil-de-usuario-121102131.jpg" class="card-img-top" alt="María López">
                     <div class="card-body">
                         <h5 class="card-title">María López</h5>
                         <p class="card-text"><span>Afiliación:</span> Instituto Tecnológico de Costa Rica</p>
@@ -77,7 +66,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="Images/CarlosGomez.jpg" class="card-img-top" alt="Carlos Gómez">
+                    <img src="https://thumbs.dreamstime.com/b/l%C3%ADnea-icono-del-negro-avatar-perfil-de-usuario-121102131.jpg" class="card-img-top" alt="Carlos Gómez">
                     <div class="card-body">
                         <h5 class="card-title">Carlos Gómez</h5>
                         <p class="card-text"><span>Afiliación:</span> Universidad Nacional</p>

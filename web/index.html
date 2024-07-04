@@ -33,18 +33,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </header>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <a href = "LoginGraphic.jsp">Login</a>
+            <a href = "LoginGraphic.jsp">Iniciar Sesión</a>
             <a href = "RegistrationGraphic.jsp">Registro</a>
             <a href = "CalendarGraphic.jsp">Actividades</a>
-            <div class="MenuIteam">
-                <a class ="a" href = "MapaGraphic.jsp" id="mapa">Mapa</a>
-                <ul class="subMenu" id="submenu">
-                    <li><a href ="#">Golfito</a></li>
-                    <li><a href ="#">SedeSur</a></li>
-                </ul>
-            </div>
+            
+
+            <a class ="a" href = "MapaGraphic.jsp" id="mapa">Mapa</a>
+            <ul class="subMenu" id="submenu">
+                <li><a href ="#">Golfito</a></li>
+                <li><a href ="#">SedeSur</a></li>
+            </ul>
+
             <a href = "HistoryGraphic.jsp">Historia</a>
-            <a href = "#">Contacto</a>
+            <a href = "LogoutServlet">Cerrar Sesión</a>
 
 
         </nav>
@@ -98,26 +99,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div>
             </div>
         </section>
-       
+
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
         <section class="activities">
-            <h1 class="actividad-titulo">ACTIVIDADES</h1>
+            <h1 class="actividad-titulo text-center mb-5">Actividades</h1>
             <div id="activitiesCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="https://i.pinimg.com/736x/c5/c4/b4/c5c4b412833b626666865c0d71e4b2e4.jpg" class="d-block w-100" alt="Actividad 1">
+                                    <img src="Images/Foros.png" class="d-block w-100" alt="Actividad 1">
                                 </div>
                                 <div class="flip-card-back">
-                                    <h5>Actividad 1</h5>
-                                    <p>Lugar: Aula Magna</p>
-                                    <p>Hora: 10:00 AM</p>
-                                    <p>Ponente: Dr. Juan Pérez</p>
-                                    <button class="btn btn-inscripcion">Inscribirse</button>
+                                    <h3>Foros de Innovación en IA:</h3>
+                                    <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                                    <p><i class="fas fa-clock"></i> 10:00 AM</p>
+                                    <p><i class="fas fa-user"></i> Juan Pérez</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Sala 1</p>
+                                    <button class="btn btn-inscripcion" onclick="redirectToPage('CalendarGraphic.jsp')">Ver Mas</button>
                                 </div>
                             </div>
                         </div>
@@ -126,14 +128,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="https://i.pinimg.com/736x/c5/c4/b4/c5c4b412833b626666865c0d71e4b2e4.jpg" class="d-block w-100" alt="Actividad 2">
+                                    <img src="Images/Simulacro.png" class="d-block w-100" alt="Actividad 2">
                                 </div>
                                 <div class="flip-card-back">
-                                    <h5>Actividad 2</h5>
-                                    <p>Lugar: Sala de Conferencias</p>
-                                    <p>Hora: 12:00 PM</p>
-                                    <p>Ponente: Lic. María González</p>
-                                    <button class="btn btn-inscripcion">Inscribirse</button>
+                                    <h3>Simulacros de Ataques Cibernéticos</h3>
+                                    <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                                    <p><i class="fas fa-user"></i> María López</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                                    <button class="btn btn-inscripcion" onclick="redirectToPage('CalendarGraphic.jsp')">Ver Mas</button>
                                 </div>
                             </div>
                         </div>
@@ -142,14 +145,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="https://wallpapercave.com/wp/wp2155934.jpg" class="d-block w-100" alt="Actividad 3">
+                                    <img src="Images/Mesas.png" class="d-block w-100" alt="Actividad 3">
                                 </div>
                                 <div class="flip-card-back">
-                                    <h5>Actividad 3</h5>
-                                    <p>Lugar: Auditorio Principal</p>
-                                    <p>Hora: 02:00 PM</p>
-                                    <p>Ponente: Ing. Carlos López</p>
-                                    <button class="btn btn-inscripcion">Inscribirse</button>
+                                    <h3>Mesas Redondas sobre Regulación de Datos y Privacidad</h3>
+                                    <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+                                    <p><i class="fas fa-clock"></i> 11:00 AM</p>
+                                    <p><i class="fas fa-user"></i> María López</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
+                                    <button class="btn btn-inscripcion" onclick="redirectToPage('CalendarGraphic.jsp')">Ver Mas</button>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +169,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </a>
             </div>
         </section>
-         <section class="faq-section py-5">
+
+        <section class="faq-section py-5 ">
             <div class="container">
                 <h2 class="text-center mb-5">Preguntas Frecuentes</h2>
                 <div class="accordion" id="faqAccordion">
@@ -208,6 +213,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div>
             </div>
         </section>
+        
+        <script>
+    function redirectToPage(page) {
+        window.location.href = page;
+    }
+</script>
         <footer class="footer">
 
             <div class="container">

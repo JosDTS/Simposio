@@ -23,6 +23,7 @@
             if (lg.login(request, password, email)) {
                 
                 response.sendRedirect("index.html");
+                
             } else {
                 
                 response.sendRedirect("RegistrationGraphic.jsp");

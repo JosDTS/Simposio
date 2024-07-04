@@ -36,19 +36,9 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
             <a href ="index.html">Inicio</a>
-            <a href ="LoginGraphic.jsp">Login</a>
-            <a href = "RegistrationGraphic.jsp">Registro</a>
-            <a href = "CalendarGraphic.jsp">Actividades</a>
-            <div class="MenuIteam">
-                <a href = "MapaGraphic.jsp" id="mapa">Mapa</a>
-                <ul class="subMenu" id="submenu">
-                    <li><a href ="#">Golfito</a></li>
-                    <li><a href ="#">SedeSur</a></li>
-                </ul>
-            </div>
-            <a href = "HistoryGraphic.jsp">Historia</a>
-            <a href = "#">Contacto</a>
-
+            
+            
+         
         </nav>
         <section class="History-box" >
 

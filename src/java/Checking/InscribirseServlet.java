@@ -52,7 +52,7 @@ public class InscribirseServlet extends HttpServlet {
      */
     private void loadRegistrations() {
         for (String activityId : cuposDisponibles.keySet()) {
-            String fileName = "C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\activity_" + activityId + ".txt";
+            String fileName = "D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\activity_" + activityId + ".txt";
             File file = new File(fileName);
             List<String> registeredUsers = new LinkedList<>();
             if (file.exists()) {
@@ -77,67 +77,67 @@ public class InscribirseServlet extends HttpServlet {
      * @throws ServletException if an error occurs during the servlet execution
      * @throws IOException      if an I/O error occurs
      */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    HttpSession session = request.getSession(false);
+    response.setContentType("application/json");
+    PrintWriter out = response.getWriter();
 
-        StringBuilder sb = new StringBuilder();
-        String line;
-        try (BufferedReader reader = request.getReader()) {
-            while ((line = reader.readLine()) != null) {
-                sb.append(line);
-            }
+    StringBuilder sb = new StringBuilder();
+    String line;
+    try (BufferedReader reader = request.getReader()) {
+        while ((line = reader.readLine()) != null) {
+            sb.append(line);
         }
-        String requestBody = sb.toString();
-        String activityId = extractActivityId(requestBody);
-
-        StringBuilder jsonResponse = new StringBuilder();
-        jsonResponse.append("{");
-
-        if (session == null || session.getAttribute("usuarioLogueado") == null) {
-            jsonResponse.append("\"success\": false,");
-            jsonResponse.append("\"message\": \"No ha iniciado sesion\"");
-        } else {
-            String username = (String) session.getAttribute("usuarioLogueado");
-
-            synchronized (this) {
-                int cupos = cuposDisponibles.getOrDefault(activityId, 0);
-                if (cupos > 0) {
-                    List<String> registeredUsers = activityRegistrations.getOrDefault(activityId, new LinkedList<>());
-
-                    if (registeredUsers.contains(username)) {
-                        jsonResponse.append("\"success\": false,");
-                        jsonResponse.append("\"message\": \"Ya está inscrito en esta actividad.\"");
-                    } else {
-                        // Register the user
-                        registeredUsers.add(username);
-                        activityRegistrations.put(activityId, registeredUsers);
-
-                        // Write to the file
-                        String fileName = "C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\activity_" + activityId + ".txt";
-                        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
-                            bw.write(username + "\n");
-                        }
-
-                        // Update available slots
-                        cuposDisponibles.put(activityId, cupos - 1);
-
-                        jsonResponse.append("\"success\": true,");
-                        jsonResponse.append("\"message\": \"Inscripción exitosa.\",");
-                        jsonResponse.append("\"cuposRestantes\": ").append(cupos - 1);
-                    }
-                } else {
-                    jsonResponse.append("\"success\": false,");
-                    jsonResponse.append("\"message\": \"Lo sentimos, no hay cupos disponibles.\"");
-                }
-            }
-        }
-
-        jsonResponse.append("}");
-        out.print(jsonResponse.toString());
-        out.flush();
     }
+    String requestBody = sb.toString();
+    String activityId = extractActivityId(requestBody);
+
+    StringBuilder jsonResponse = new StringBuilder();
+    jsonResponse.append("{");
+
+    if (session == null || session.getAttribute("usuarioLogueado") == null) { // Modificado para usar "usuarioLogueado"
+        jsonResponse.append("\"success\": false,");
+        jsonResponse.append("\"message\": \"No ha iniciado sesion\"");
+    } else {
+        String username = (String) session.getAttribute("usuarioLogueado"); // Modificado para usar "usuarioLogueado"
+
+        synchronized (this) {
+            int cupos = cuposDisponibles.getOrDefault(activityId, 0);
+            if (cupos > 0) {
+                List<String> registeredUsers = activityRegistrations.getOrDefault(activityId, new LinkedList<>());
+
+                if (registeredUsers.contains(username)) {
+                    jsonResponse.append("\"success\": false,");
+                    jsonResponse.append("\"message\": \"Ya está inscrito en esta actividad.\"");
+                } else {
+                    // Register the user
+                    registeredUsers.add(username);
+                    activityRegistrations.put(activityId, registeredUsers);
+
+                    // Write to the file
+                    String fileName = "D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\activity_" + activityId + ".txt";
+                    try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
+                        bw.write(username + "\n");
+                    }
+
+                    // Update available slots
+                    cuposDisponibles.put(activityId, cupos - 1);
+
+                    jsonResponse.append("\"success\": true,");
+                    jsonResponse.append("\"message\": \"Inscripción exitosa.\",");
+                    jsonResponse.append("\"cuposRestantes\": ").append(cupos - 1);
+                }
+            } else {
+                jsonResponse.append("\"success\": false,");
+                jsonResponse.append("\"message\": \"Lo sentimos, no hay cupos disponibles.\"");
+            }
+        }
+    }
+
+    jsonResponse.append("}");
+    out.print(jsonResponse.toString());
+    out.flush();
+}
 
     /**
      * Extracts the activity ID from the request body.

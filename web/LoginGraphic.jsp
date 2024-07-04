@@ -29,7 +29,7 @@
             <nav class="navbar navbar-expand-sm bg-body-tertiary"> 
                 <a href = "index.html">Inicio</a>
                 <a href = "RegistrationGraphic.jsp">Registrarse</a>
-                <a href = "#">Contacto</a>
+                
 
             </nav>
             <form id="loginForm" action="Login.jsp" method="Post">

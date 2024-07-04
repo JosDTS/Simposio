@@ -36,19 +36,11 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <a href="index.html">Inicio</a>
-            <a href="LoginGraphic.jsp">Login</a>
+            <a href="LoginGraphic.jsp">Iniciar Sesión</a>
             <a href="RegistrationGraphic.jsp">Registro</a>
-            <a href="CalendarGraphic.jsp">Actividades</a>
             <a href="Speaker.jsp">Ponentes</a>
-            <div class="MenuIteam">
-                <a class="a" href="MapaGraphic.jsp" id="mapa">Mapa</a>
-                <ul class="subMenu" id="submenu">
-                    <li><a href="#">Golfito</a></li>
-                    <li><a href="#">SedeSur</a></li>
-                </ul>
-            </div>
-            <a href="HistoryGraphic.jsp">Historia</a>
-            <a href="#">Contacto</a>
+            <a href = "LogoutServlet">Cerrar Sesión</a>
+        
         </nav>
 
         <main class="container">
@@ -94,7 +86,7 @@
                         <p><i class="fas fa-clock"></i> 11:00 AM</p>
                         <p><i class="fas fa-user"></i> María López</p>
                         <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
-                        <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                        <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 2">
                         <div class="activity-details">
                             <p>Descripción: Ejercicios prácticos donde los participantes simularán escenarios de ataques 
                                 cibernéticos para comprender mejor las amenazas actuales 
@@ -113,7 +105,7 @@
                         <p><i class="fas fa-clock"></i> 11:00 AM</p>
                         <p><i class="fas fa-user"></i> María López</p>
                         <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
-                        <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                        <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 2">
                         <div class="activity-details">
                             <p>Descripción: Debates enfocados en la regulación de datos personales 
                                 y privacidad en el contexto de la inteligencia artificial. 
@@ -133,7 +125,7 @@
                         <p><i class="fas fa-clock"></i> 11:00 AM</p>
                         <p><i class="fas fa-user"></i> María López</p>
                         <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
-                        <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                        <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 2">
                         <div class="activity-details">
                             <p>Descripción: Seminarios dedicados a explorar los aspectos éticos de la inteligencia artificial, 
                                 centrados en cómo las empresas pueden asegurar que sus aplicaciones de IA sean éticamente responsables y socialmente beneficiosas.</p>
@@ -151,7 +143,7 @@
                         <p><i class="fas fa-clock"></i> 11:00 AM</p>
                         <p><i class="fas fa-user"></i> María López</p>
                         <p><i class="fas fa-map-marker-alt"></i> Sala 2</p>
-                        <img src="imagen2.jpg" alt="Imagen de la actividad 2">
+                        <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 2">
                         <div class="activity-details">
                             <p>Descripción: Espacios informales para que participantes, conferencistas y empresas patrocinadoras interactúen, 
                                 compartan ideas y establezcan contactos comerciales. 

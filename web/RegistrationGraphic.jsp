@@ -38,8 +38,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <a href = "index.html">Inicio</a>
             <a href = "LoginGraphic.jsp">Iniciar Sesion</a>
-            <a href = "CalendarGraphic.jsp">Actividades</a>
-            <a href = "#">Contacto</a>
+           
         </nav>
         
         <div class="container2" class="mb-3">
