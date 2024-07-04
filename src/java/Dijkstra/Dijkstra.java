@@ -4,31 +4,39 @@
  */
 package Dijkstra;
 
-/**
- *
- * @author Sheys
- */
 import java.util.*;
 
+/**
+ * The Dijkstra class provides a method to calculate the shortest path between two vertices in a graph using Dijkstra's algorithm.
+ */
 public class Dijkstra {
+    /**
+     * Calculates the shortest path between the start vertex and the end vertex in the given graph.
+     *
+     * @param startVertex the starting vertex
+     * @param endVertex   the ending vertex
+     * @param vertices    an array of vertices in the graph
+     * @param grafo       the adjacency matrix representing the graph
+     * @return the shortest path as a string, including the total distance
+     */
     public static String calcularRutaMasCorta(String startVertex, String endVertex, String[] vertices, int[][] grafo) {
-        // Inicializar las distancias y los vértices previos
+       
         Map<String, Double> distancias = new HashMap<>();
         Map<String, String> previos = new HashMap<>();
         Set<String> visitados = new HashSet<>();
 
-        // Inicializar las distancias con valores infinitos, excepto para el vértice de inicio
+        
         for (String vertice : vertices) {
             distancias.put(vertice, Double.MAX_VALUE);
         }
         distancias.put(startVertex, 0.0);
 
-        // Encontrar el vértice con la distancia mínima no visitado
+       
         while (!visitados.contains(endVertex)) {
             String verticeActual = encontrarVerticeNoVisitadoConMenorDistancia(distancias, visitados);
             visitados.add(verticeActual);
 
-            // Actualizar las distancias de los vecinos del vértice actual
+            
             for (int i = 0; i < vertices.length; i++) {
                 if (grafo[Arrays.asList(vertices).indexOf(verticeActual)][i] != 0) {
                     String vecino = vertices[i];
@@ -42,7 +50,7 @@ public class Dijkstra {
             }
         }
 
-        // Reconstruir la ruta más corta
+       
         List<String> rutaMasCorta = new ArrayList<>();
         String verticeActual = endVertex;
         while (verticeActual != null) {
@@ -50,13 +58,20 @@ public class Dijkstra {
             verticeActual = previos.get(verticeActual);
         }
 
-        // Calcular la distancia total
+     
         double distanciaTotal = distancias.get(endVertex);
 
-        // Devolver la ruta más corta como una cadena de texto
+        
         return String.join(" -> ", rutaMasCorta) + " (Distancia total: " + distanciaTotal + ")";
     }
 
+    /**
+     * Finds the unvisited vertex with the minimum distance.
+     *
+     * @param distancias the map of distances for each vertex
+     * @param visitados  the set of visited vertices
+     * @return the vertex with the minimum distance that has not been visited
+     */
     private static String encontrarVerticeNoVisitadoConMenorDistancia(Map<String, Double> distancias, Set<String> visitados) {
         double distanciaMinima = Double.MAX_VALUE;
         String verticeMinimo = null;

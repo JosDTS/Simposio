@@ -17,34 +17,47 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- *
+ * Class responsible for handling user login and logout functionality.
+ * It uses the AesEncryption class to decrypt the user's email and password
+ * stored in a text file.
+ * 
  * @author Jocelyn
  * @author Jeison
  * @author Adrian 
  */
 public class LoginUsers {
 
+    /**
+     * Logs in a user.
+     * 
+     * @param request The HttpServletRequest object
+     * @param password The user's password
+     * @param email The user's email address
+     * @return true if the user is logged in successfully, false otherwise
+     * @throws IOException can throw an IOException if an error occurs while reading the file
+     * @throws Exception can throw an Exception if an error occurs during the login process
+     */
     public boolean login(HttpServletRequest request, String password, String email) throws IOException, Exception {
         AesEncryption cr = new AesEncryption();
         try {
 
-            File file = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt");
+            File file = new File("C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\UsersInformation.txt");
 
            
             String absolutePath = file.getAbsolutePath();
-            System.out.println("Ruta absoluta: " + absolutePath);
+            System.out.println("Absolute path: " + absolutePath);
             BufferedReader reader = new BufferedReader(
                     new FileReader(absolutePath));
-            String linea = "";
-            while ((linea = reader.readLine()) != null) {
-                String[] datos = linea.split(",");
-                String emailDecrypt = cr.decrypt(datos[2]);
-                String passwordDecrypt = cr.decrypt(datos[3]);
+            String line = "";
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                String emailDecrypt = cr.decrypt(data[2]);
+                String passwordDecrypt = cr.decrypt(data[3]);
 
                 if (emailDecrypt.equals(email) && passwordDecrypt.equals(password)) {
                    
                     HttpSession session = request.getSession();
-                    session.setAttribute("usuarioLogueado", email);
+                    session.setAttribute("loggedInUser", email);
                     return true;
                 }
             }
@@ -54,14 +67,26 @@ public class LoginUsers {
         return false;
     }
 
+    /**
+     * Checks if a user is currently logged in.
+     * 
+     * @param request The HttpServletRequest object
+     * @return true if the user is logged in, false otherwise
+     */
     public boolean isUserLoggedIn(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        String usuarioLogueado = (String) session.getAttribute("usuarioLogueado");
-        return usuarioLogueado != null;
+        String loggedInUser = (String) session.getAttribute("loggedInUser");
+        return loggedInUser != null;
     }
 
+    /**
+     * Logs out the currently logged-in user.
+     * 
+     * @param request The HttpServletRequest object
+     */
     public void logoutUser(HttpServletRequest request) {
         HttpSession session = request.getSession();
         session.invalidate();
     }
 }
+

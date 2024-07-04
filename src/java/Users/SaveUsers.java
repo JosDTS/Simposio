@@ -8,16 +8,34 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Path;
 
 /**
- *
+ * Class responsible for saving user information in a text file.
+ * It uses the AesEncryption class to encrypt the data before saving it.
+ * 
  * @author ESTUDIANTE
  */
 public class SaveUsers {
-
+    
+    /**
+     * Instance of the AesEncryption class to encrypt the data.
+     */
     AesEncryption cr = new AesEncryption();
 
+    /**
+     * Saves the user's information in a text file.
+     * 
+     * @param userType The type of user (e.g., "Student", "Professor", etc.)
+     * @param name The user's name
+     * @param email The user's email address
+     * @param password The user's password
+     * @param identification The user's identification (e.g., ID number)
+     * @param institution The institution the user belongs to
+     * @param interestArea The user's area of interest
+     * @param participantType The type of participant (e.g., "Attendee", "Presenter", etc.)
+     * @return true if the information was saved successfully, false otherwise
+     * @throws Exception can throw an exception if an error occurs while saving the information
+     */
     public boolean save(String userType, String name,
             String email, String password, String identification,
             String institution, String interestArea, String participantType)
@@ -30,12 +48,12 @@ public class SaveUsers {
             myArrayEncrypted[i] = cr.encrypt(myArray[i]);
         }
         try {
-            // Crear un objeto File con la ruta del archivo
-            File file = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt");
+            
+            File file = new File("C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\UsersInformation.txt");
 
-            // Obtener la ruta absoluta del archivo
+            
             String absolutePath = file.getAbsolutePath();
-            System.out.println("Ruta absoluta: " + absolutePath);
+            System.out.println("Absolute path: " + absolutePath);
          
             BufferedWriter writer = new BufferedWriter(
                     new FileWriter(absolutePath, true));
@@ -46,7 +64,7 @@ public class SaveUsers {
             writer.close();
             return true;
         } catch (IOException e) {
-            System.out.println("Error al guardar");
+            System.out.println("Error saving the information");
             return false;
 
         }

@@ -4,15 +4,8 @@
  */
 package Checking;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,25 +14,68 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import ModuleUser.LoginUsers;
 
+/**
+ * The InscribirseServlet class is a Java Servlet that handles the registration process for activities.
+ * It manages the available slots for each activity and the registration of users.
+ */
 @WebServlet(name = "InscribirseServlet", urlPatterns = {"/InscribirseServlet"})
 public class InscribirseServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private LoginUsers loginUsers = new LoginUsers();
     private Map<String, Integer> cuposDisponibles;
+    private Map<String, List<String>> activityRegistrations;
 
+    /**
+     * Initializes the servlet by setting up the available slots for each activity and loading the existing registrations.
+     *
+     * @throws ServletException if an error occurs during initialization
+     */
     @Override
     public void init() throws ServletException {
         super.init();
         cuposDisponibles = new HashMap<>();
-        cuposDisponibles.put("1", 30);  
-        cuposDisponibles.put("2", 30);  
-        cuposDisponibles.put("3", 0);  
-        cuposDisponibles.put("4", 30);  
-        cuposDisponibles.put("5", 30);  
+        activityRegistrations = new HashMap<>();
+        cuposDisponibles.put("1", 30);
+        cuposDisponibles.put("2", 30);
+        cuposDisponibles.put("3", 0);
+        cuposDisponibles.put("4", 30);
+        cuposDisponibles.put("5", 30);
+
+        loadRegistrations();
     }
 
+    /**
+     * Loads the existing registrations for each activity from text files.
+     */
+    private void loadRegistrations() {
+        for (String activityId : cuposDisponibles.keySet()) {
+            String fileName = "C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\activity_" + activityId + ".txt";
+            File file = new File(fileName);
+            List<String> registeredUsers = new LinkedList<>();
+            if (file.exists()) {
+                try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                    String registeredUser;
+                    while ((registeredUser = br.readLine()) != null) {
+                        registeredUsers.add(registeredUser);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            activityRegistrations.put(activityId, registeredUsers);
+        }
+    }
+
+    /**
+     * Handles the POST request for the registration process.
+     *
+     * @param request  the HttpServletRequest object
+     * @param response the HttpServletResponse object
+     * @throws ServletException if an error occurs during the servlet execution
+     * @throws IOException      if an I/O error occurs
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(false); 
+        HttpSession session = request.getSession(false);
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 
@@ -56,43 +92,32 @@ public class InscribirseServlet extends HttpServlet {
         StringBuilder jsonResponse = new StringBuilder();
         jsonResponse.append("{");
 
-     
         if (session == null || session.getAttribute("usuarioLogueado") == null) {
             jsonResponse.append("\"success\": false,");
-            jsonResponse.append("\"message\": \"No ha iniciado sesión\"");
+            jsonResponse.append("\"message\": \"No ha iniciado sesion\"");
         } else {
             String username = (String) session.getAttribute("usuarioLogueado");
 
-            
             synchronized (this) {
                 int cupos = cuposDisponibles.getOrDefault(activityId, 0);
                 if (cupos > 0) {
-                    String fileName = "C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\activity_" + activityId + ".txt";
-                    File file = new File(fileName);
+                    List<String> registeredUsers = activityRegistrations.getOrDefault(activityId, new LinkedList<>());
 
-                    boolean isAlreadyRegistered = false;
-                    if (file.exists()) {
-                        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                            String registeredUser;
-                            while ((registeredUser = br.readLine()) != null) {
-                                if (registeredUser.equals(username)) {
-                                    isAlreadyRegistered = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                    if (isAlreadyRegistered) {
+                    if (registeredUsers.contains(username)) {
                         jsonResponse.append("\"success\": false,");
                         jsonResponse.append("\"message\": \"Ya está inscrito en esta actividad.\"");
                     } else {
-                        // Registrar al usuario
+                        // Register the user
+                        registeredUsers.add(username);
+                        activityRegistrations.put(activityId, registeredUsers);
+
+                        // Write to the file
+                        String fileName = "C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\activity_" + activityId + ".txt";
                         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
                             bw.write(username + "\n");
                         }
 
-                        
+                        // Update available slots
                         cuposDisponibles.put(activityId, cupos - 1);
 
                         jsonResponse.append("\"success\": true,");
@@ -111,6 +136,12 @@ public class InscribirseServlet extends HttpServlet {
         out.flush();
     }
 
+    /**
+     * Extracts the activity ID from the request body.
+     *
+     * @param requestBody the request body
+     * @return the activity ID
+     */
     private String extractActivityId(String requestBody) {
         String searchString = "\"activityId\":\"";
         int startIndex = requestBody.indexOf(searchString) + searchString.length();
@@ -118,6 +149,7 @@ public class InscribirseServlet extends HttpServlet {
         return requestBody.substring(startIndex, endIndex);
     }
 }
+
 
 
 
