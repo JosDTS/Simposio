@@ -31,7 +31,7 @@ public class SaveUsers {
         }
         try {
             // Crear un objeto File con la ruta del archivo
-            File file = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt");
+            File file = new File("C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\UsersInformation.txt");
 
             // Obtener la ruta absoluta del archivo
             String absolutePath = file.getAbsolutePath();

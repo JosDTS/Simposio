@@ -64,25 +64,26 @@
 
         
         <div class="calendar">
-            <div class="day">
-                <div class="activity">
-                    <h3>Foros de Innovación en IA:</h3>
-                     <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
-                    <p><i class="fas fa-clock"></i> 10:00 AM</p>
-                    <p><i class="fas fa-user"></i> Juan Pérez</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Sala 1</p>
-                    <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 1">
-                    <div class="activity-details">
-                        <p>Descripción: Espacios colaborativos donde expertos en inteligencia artificial, 
-                            innovación y estrategia empresarial discuten tendencias emergentes,
-                            oportunidades de mercado y el futuro de la IA en diferentes sectores industriales.</p>
-                        <p>Biografía del ponente Juan Pérez...</p>
-                    </div>
-                    <div class="btn-container">
-                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
-                    </div>
-                </div>
-            </div>
+           <div class="day">
+    <div class="activity">
+        <h3>Foros de Innovación en IA:</h3>
+        <p><i class="fas fa-calendar-alt"></i> 10 de Julio de 2024</p>
+        <p><i class="fas fa-clock"></i> 10:00 AM</p>
+        <p><i class="fas fa-user"></i> Juan Pérez</p>
+        <p><i class="fas fa-map-marker-alt"></i> Sala 1</p>
+        <img src="https://th.bing.com/th/id/OIP.bUU1nRuXIQNSWnb2HORw0wAAAA?rs=1&pid=ImgDetMain" alt="Imagen de la actividad 1">
+        <div class="activity-details">
+            <p>Descripción: Espacios colaborativos donde expertos en inteligencia artificial, 
+                innovación y estrategia empresarial discuten tendencias emergentes,
+                oportunidades de mercado y el futuro de la IA en diferentes sectores industriales.</p>
+            <p>Biografía del ponente Juan Pérez...</p>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-inscribirse" data-actividad-id="1">Inscribirse</button>
+
+        </div>
+    </div>
+</div>
             <div class="day">
                 <div class="activity">
                     <h3>Simulacros de Ataques Cibernéticos</h3>
@@ -98,7 +99,7 @@
                         <p>Biografía del ponente María López...</p>
                     </div>
                     <div class="btn-container">
-                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                         <button class="btn btn-inscribirse" data-actividad-id="2">Inscribirse</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@
                         <p>Biografía del ponente María López...</p>
                     </div>
                     <div class="btn-container">
-                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                         <button class="btn btn-inscribirse" data-actividad-id="3">Inscribirse</button>
                     </div>
                 </div>
             </div>
@@ -136,7 +137,7 @@
                         <p>Biografía del ponente María López...</p>
                     </div>
                     <div class="btn-container">
-                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                        <button class="btn btn-inscribirse" data-actividad-id="4">Inscribirse</button>
                     </div>
                 </div>
             </div>
@@ -155,7 +156,7 @@
                         <p>Biografía del ponente María López...</p>
                     </div>
                     <div class="btn-container">
-                        <a href="#" class="btn btn-inscribirse">Inscribirse</a>
+                        <button class="btn btn-inscribirse" data-actividad-id="5">Inscribirse</button>
                     </div>
                 </div>
             </div>
