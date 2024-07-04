@@ -28,7 +28,7 @@ public class LoginUsers {
         AesEncryption cr = new AesEncryption();
         try {
 
-            File file = new File("C:\\Users\\chava\\OneDrive\\Documentos\\NetBeansProjects\\Simposio\\UsersInformation.txt");
+            File file = new File("D:\\Usuarios\\ESTUDIANTE\\Documents\\NetBeansProjects\\PaginaSimposio\\UsersInformation.txt");
 
            
             String absolutePath = file.getAbsolutePath();
