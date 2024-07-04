@@ -19,6 +19,7 @@
               wght@700&family=Raleway:wght@400;700&display=swap" 
               rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     </head>
     <header class="custom-header">
@@ -132,7 +133,25 @@
                 </div>
         </section>
 
-        <footer >
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 class="mb-4">Contáctanos</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon social-icon--facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon social-icon--instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon social-icon--telegram">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/j

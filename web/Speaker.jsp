@@ -18,6 +18,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="Style/Home.css">
     <link rel="stylesheet" href="Style/Speaker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header class="custom-header">
@@ -86,10 +87,28 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Universidad. Todos los derechos reservados.</p>
-    </footer>
-
+    <footer class="footer">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 class="mb-4">Contáctanos</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon social-icon--facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon social-icon--instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon social-icon--telegram">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2024 Universidad XYZ. Todos los derechos reservados.</p>
+        </footer>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
